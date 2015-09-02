@@ -310,6 +310,7 @@ var THREEScene = React.createClass({
         canvas: renderelement,
         antialias: props.antialias === undefined ? true : props.antialias
     });
+    this._THREErenderer.setPixelRatio(window.devicePixelRatio);
     this._THREErenderer.setSize(+props.width, +props.height);
     this._THREEraycaster = new THREE.Raycaster();
     //this.setApprovedDOMProperties(props);
